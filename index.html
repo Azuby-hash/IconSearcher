@@ -50876,7 +50876,7 @@
         }
 
         function copyToClipboard(img) {
-            axios(img.src, { responseType: 'stream' })
+            axios(img.src, { responseType: 'blob' })
                 .then(response => response.data)
                 .then(blob => {
                     const item = new ClipboardItem({ 
